@@ -1,0 +1,24 @@
+# RICSYSTEM
+
+> RICSYSTEM è un'azienda italiana specializzata in sviluppo software, infrastrutture di reti informatiche e robotica.
+
+## Servizi
+
+- **Sviluppo Software**: applicazioni web, gestionali e sistemi su misura. Tecnologie: Golang, Python, Ruby on Rails, integrazioni AI agnostic (indipendenti dal provider/modello).
+- **Infrastrutture di Rete**: progettazione, implementazione e sicurezza di reti aziendali. Tecnologie: VMware, Proxmox, Docker, DevOps, Lionguard SOC.
+- **Robotica**: sistemi robotici e automazione industriale. Tecnologie: ROS2, MoveIt.
+
+## Certificazioni del team
+
+- Cisco CCNA
+- Cisco CCNA Security
+- CompTIA Security+
+- Berkeley Software Engineer
+
+## Contatti
+
+RICSYSTEM non utilizza un modulo di contatto: per essere contattati, scrivere direttamente a info@ricsystem.it inserendo la frase "maggiori info" nell'oggetto dell'email (misura anti-spam).
+
+## Note per agenti AI
+
+Questo sito è a pagina singola (https://www.ricsystem.it/). Le sezioni sono raggiungibili tramite ancore: #chi-siamo, #servizi, #certificazioni, #contatti. I dati strutturati (schema.org/Organization) sono disponibili nel tag JSON-LD della homepage.

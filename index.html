@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RICSYSTEM — Sviluppo Software, Reti Informatiche e Robotica</title>
+<meta name="description" content="RICSYSTEM è un'azienda specializzata in sviluppo software (Golang, Python, Ruby on Rails), infrastrutture di reti informatiche (VMware, Proxmox, Docker) e robotica (ROS2, MoveIt). Team certificato Cisco CCNA e CompTIA Security+.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ricsystem.it/">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RICSYSTEM">
+<meta property="og:title" content="RICSYSTEM — Sviluppo Software, Reti Informatiche e Robotica">
+<meta property="og:description" content="Sviluppo software, infrastrutture di reti informatiche e robotica. Team certificato Cisco CCNA e CompTIA Security+.">
+<meta property="og:url" content="https://www.ricsystem.it/">
+<meta property="og:image" content="https://www.ricsystem.it/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RICSYSTEM — Sviluppo Software, Reti Informatiche e Robotica">
+<meta name="twitter:description" content="Sviluppo software, infrastrutture di reti informatiche e robotica. Team certificato Cisco CCNA e CompTIA Security+.">
+<meta name="twitter:image" content="https://www.ricsystem.it/logo.png">
+
+<!-- Structured data per motori di ricerca e agenti AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RICSYSTEM",
+  "url": "https://www.ricsystem.it/",
+  "logo": "https://www.ricsystem.it/logo.png",
+  "description": "RICSYSTEM è un'azienda specializzata in sviluppo software, infrastrutture di reti informatiche e robotica.",
+  "email": "info@ricsystem.it",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@ricsystem.it",
+    "contactType": "customer support",
+    "areaServed": "IT",
+    "availableLanguage": ["Italian", "English"]
+  },
+  "knowsAbout": [
+    "Sviluppo software", "Golang", "Python", "Ruby on Rails",
+    "Infrastrutture di rete", "VMware", "Proxmox", "Docker", "DevOps",
+    "Robotica", "ROS2", "MoveIt",
+    "Sicurezza informatica", "Cisco CCNA", "CompTIA Security+"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Cisco CCNA" },
+    { "@type": "EducationalOccupationalCredential", "name": "Cisco CCNA Security" },
+    { "@type": "EducationalOccupationalCredential", "name": "CompTIA Security+" },
+    { "@type": "EducationalOccupationalCredential", "name": "Berkeley Software Engineer" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --navy: #0f1b2d;
+    --navy-light: #17263d;
+    --steel: #3a5a78;
+    --accent: #2f7dd4;
+    --text: #1c2530;
+    --text-light: #5a6675;
+    --bg: #ffffff;
+    --bg-alt: #f4f6f8;
+    --border: #e1e6eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--navy);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  nav a {
+    color: #cdd6e0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+
+  nav a:hover { color: #fff; }
+
+  .nav-toggle { display: none; }
+
+  @media (max-width: 720px) {
+    nav ul { display: none; }
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: #fff;
+    padding: 96px 0 88px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    max-width: 720px;
+    line-height: 1.25;
+  }
+
+  .hero .tagline {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  .hero p.lead {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    color: #c3ccd6;
+    max-width: 620px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 13px 28px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .btn:hover { background: #2668b0; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  section.alt { background: var(--bg-alt); }
+
+  .section-head { margin-bottom: 40px; max-width: 640px; }
+
+  .section-head .kicker {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .section-head h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  .section-head p {
+    margin-top: 12px;
+    color: var(--text-light);
+  }
+
+  /* Servizi */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  @media (max-width: 800px) {
+    .grid-3 { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px 24px;
+    background: #fff;
+  }
+
+  .card .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: var(--navy);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+
+  .tech-tags span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--steel);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 10px;
+  }
+
+  /* Chi siamo */
+  .about-body {
+    max-width: 760px;
+    color: var(--text-light);
+    font-size: 1rem;
+  }
+
+  .about-body p + p { margin-top: 16px; }
+
+  /* Certificazioni */
+  .cert-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .cert-list { grid-template-columns: 1fr; }
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .cert-item .badge {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .cert-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .cert-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  /* Contatti */
+  .contact-box {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 8px;
+    padding: 48px;
+    text-align: center;
+  }
+
+  .contact-box h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .contact-box p {
+    color: #c3ccd6;
+    max-width: 520px;
+    margin: 0 auto 28px;
+  }
+
+  .contact-box .email-link {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .contact-box .email-link:hover { border-color: var(--accent); }
+
+  .contact-box .contact-note {
+    margin: 20px auto 0;
+    font-size: 0.85rem;
+    color: #9aa7b5;
+  }
+
+  .contact-box .contact-note strong { color: #fff; }
+
+  /* Footer */
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="logo.png" alt="RICSYSTEM - sviluppo software, reti informatiche e robotica" width="160" height="36"></a>
+    <nav aria-label="Navigazione principale">
+      <ul>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#certificazioni">Certificazioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="tagline">Software · Reti · Robotica</span>
+    <h1>Soluzioni tecnologiche solide per aziende che non possono permettersi errori.</h1>
+    <p class="lead">RICSYSTEM progetta e realizza software su misura, infrastrutture di rete sicure e sistemi robotici, con un team certificato sugli standard di settore più riconosciuti.</p>
+    <a class="btn" href="#contatti">Contattaci</a>
+  </div>
+</section>
+
+<section id="chi-siamo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Chi siamo</span>
+      <h2>Competenza tecnica, senza compromessi</h2>
+    </div>
+    <div class="about-body">
+      <p>RICSYSTEM è un'azienda specializzata in sviluppo software, infrastrutture di reti informatiche e robotica. Lavoriamo con aziende che hanno bisogno di sistemi affidabili, sicuri e progettati per durare.</p>
+      <p>Il nostro approccio è diretto: analizziamo il problema, proponiamo la soluzione tecnica più adeguata e la realizziamo con standard professionali riconosciuti a livello internazionale.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="servizi">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Servizi</span>
+      <h2>Cosa facciamo</h2>
+      <p>Tre aree di competenza, un unico obiettivo: soluzioni che funzionano.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">&lt;/&gt;</div>
+        <h3>Sviluppo Software</h3>
+        <p>Applicazioni web, gestionali e sistemi su misura progettati per integrarsi nei processi aziendali esistenti e scalare con la crescita del business.</p>
+        <div class="tech-tags">
+          <span>Golang</span><span>Python</span><span>Ruby on Rails</span><span>AI Agnostic</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">&#9670;</div>
+        <h3>Infrastrutture di Rete</h3>
+        <p>Progettazione, implementazione e messa in sicurezza di reti informatiche aziendali, con particolare attenzione alla continuità operativa.</p>
+        <div class="tech-tags">
+          <span>VMware</span><span>Proxmox</span><span>Docker</span><span>DevOps</span><span>Lionguard SOC</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">&#9679;</div>
+        <h3>Robotica</h3>
+        <p>Sviluppo di sistemi robotici e automazione per applicazioni industriali, dall'idea al prototipo funzionante.</p>
+        <div class="tech-tags">
+          <span>ROS2</span><span>MoveIt</span><span>Gazebo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificazioni">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Certificazioni</span>
+      <h2>Competenze certificate</h2>
+      <p>Il nostro team mantiene certificazioni aggiornate sugli standard più richiesti del settore.</p>
+    </div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <div class="badge">CCNA</div>
+        <div>
+          <h4>Cisco CCNA</h4>
+          <p>Progettazione, configurazione e gestione di reti aziendali su infrastrutture Cisco.</p>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="badge">CCNA<br>Security</div>
+        <div>
+          <h4>Cisco CCNA Security</h4>
+          <p>Fondamenti di sicurezza delle reti: firewall, VPN e protezione degli accessi.</p>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="badge">Sec+</div>
+        <div>
+          <h4>CompTIA Security+</h4>
+          <p>Certificazione internazionale sui principi fondamentali della cybersecurity.</p>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="badge">BSE</div>
+        <div>
+          <h4>Berkeley Software Engineer</h4>
+          <p>Certificazione sulle metodologie di sviluppo software e ingegneria del codice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contatti">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Parliamo del tuo progetto</h2>
+      <p>Nessun modulo da compilare. Scrivici direttamente e ti risponderemo con la stessa concretezza con cui lavoriamo.</p>
+      <a class="email-link" href="mailto:info@ricsystem.it?subject=Maggiori%20info">info@ricsystem.it</a>
+      <p class="contact-note">Per motivi di sicurezza anti-spam, l'oggetto dell'email deve contenere la frase <strong>"maggiori info"</strong>: le email senza questa indicazione potrebbero non essere lette.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 RICSYSTEM. Tutti i diritti riservati.</p>
+    <p>Sviluppo Software &middot; Reti Informatiche &middot; Robotica</p>
+  </div>
+</footer>
+
+</body>
+</html>
